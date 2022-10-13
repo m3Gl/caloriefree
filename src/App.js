@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Activity from "./Components/Activity";
+import NewActivity from "./Components/NewActivity/NewActivity";
 
-function App() {
+const DEFAULT_ACTIVITIES = [
+  {
+    id: "c1",
+    dateActive: new Date(2022, 5, 10),
+    description: "Бег",
+    amount: 500,
+  },
+  {
+    id: "c2",
+    dateActive: new Date(2022, 5, 10),
+    description: "Бег",
+    amount: 500,
+  },
+  {
+    id: "c3",
+    dateActive: new Date(2022, 5, 10),
+    description: "Бег",
+    amount: 500,
+  },
+  {
+    id: "c4",
+    dateActive: new Date(2022, 5, 10),
+    description: "Бег",
+    amount: 500,
+  },
+  {
+    id: "c5",
+    dateActive: new Date(2022, 5, 10),
+    description: "Бег",
+    amount: 500,
+  },
+];
+
+const App = () => {
+  const [activities, setActivities] = useState(DEFAULT_ACTIVITIES);
+
+  const addActivityHandler = (activity) => {
+    setActivities((previousActivity) => {
+      return [activity, ...previousActivity];
+    });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NewActivity onAddActivity={addActivityHandler} />
+      <Activity activities={activities} />
     </div>
   );
-}
+};
 
 export default App;
