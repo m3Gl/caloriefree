@@ -21,7 +21,7 @@ const ActivityForm = (props) => {
           const activityData = {
             description: inputName,
             amount: inputAmount,
-            date:new Date(inputDate)
+            date:(inputDate)
           }
           props.onSaveActivityData(activityData)    
           
