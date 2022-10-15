@@ -28,9 +28,11 @@ const App = () => {
 
       
    
-      <NewActivity onAddActivity={addActivityHandler} />
+       <NewActivity onAddActivity={addActivityHandler} />
+
+      
      
-      <Activity activities={activities} />
+      <Activity activities={activities}  /> 
 
       
      

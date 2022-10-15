@@ -2,6 +2,7 @@ import ActivityItem from "./ActivityItem";
 import Card from "./Card";
 import React, { useState } from "react";
 import ActivityFilter from "./ActivityFilter";
+import Login from "./Login";
 function Activity(props) {
   const [selectedYear, setSelectedYear] = useState(2022);
   const yearChangeHandler = (year) => {
@@ -11,8 +12,9 @@ function Activity(props) {
   return (
     <div>
       <Card className="activity">
+        
         <ActivityFilter year={selectedYear} onChangeYear={yearChangeHandler} />
-
+         
         {props.activities.map((activity) => (
           <ActivityItem
             dateActive={new Date(activity.date)}
