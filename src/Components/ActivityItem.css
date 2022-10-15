@@ -53,4 +53,10 @@
       padding: 0.5rem 1.5rem;
     }
   }
+  .details__button {
+    border-radius: 10px;
+    background-color:#A0D6B4;
+   
+   
+  }
   
