@@ -2,7 +2,7 @@
     background-color: #A0D6B5;
     padding: 1rem;
     margin: 2rem auto;
-    width: 70rem;
+    width: 80rem;
     max-width: 95%;
     border-radius: 10px;
     text-align: center;
@@ -13,8 +13,8 @@
     font: inherit;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 1px solid #2a5b84;
-    background-color: #2a5b84;
+    border: 1px solid #87CEFA;
+    background-color: #87CEFA;
     color: #fefae1;
     border-radius: 10px;
     margin-right: 3px;
