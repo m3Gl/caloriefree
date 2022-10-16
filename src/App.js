@@ -10,32 +10,21 @@ const DEFAULT_ACTIVITIES = [
     description: "Бег",
     amount: 500,
   }
-  
 ];
 
 const App = () => {
   const [activities, setActivities] = useState(DEFAULT_ACTIVITIES);
-  
+
   const addActivityHandler = (activity) => {
     setActivities((previousActivity) => {
       return [activity, ...previousActivity];
     });
   };
   return (
-    
     <div>
+      <NewActivity onAddActivity={addActivityHandler} />
 
-
-      
-   
-       <NewActivity onAddActivity={addActivityHandler} />
-
-      
-     
-      <Activity activities={activities}  /> 
-
-      
-     
+      <Activity activities={activities} />
     </div>
   );
 };

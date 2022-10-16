@@ -1,0 +1,9 @@
+.details__box {
+    position: fixed;
+    top:300px;
+    left: 300px;
+    height: 300px;
+    width: 500px;
+    background-color:brown;
+    opacity: 0.9;
+}
